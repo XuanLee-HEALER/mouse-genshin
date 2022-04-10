@@ -22,7 +22,7 @@ if resp.status == 302:
     resp = conn.getresponse()
     print(resp.status, resp.reason)
     data = resp.read()
-    with open('./pages', 'w') as f:
+    with open('./pages/mapIndex.html', 'w') as f:
         f.write(bytes.decode(data))
 else:
     print(resp.status, resp.reason)
